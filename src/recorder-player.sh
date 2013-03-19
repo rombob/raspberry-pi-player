@@ -4,9 +4,11 @@
 
 set -u -e
 
+SCRIPT_DIR=$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd ) 
+source $SCRIPT_DIR/recorder-player.conf
+
 init_player()
 {
-  source recorder-player.conf
   for i in `seq 1 2`; do
     PING=$(ping -c $PINGCOUNT -W 2000 $PING_HOST | grep received | cut -d ',' -f2 | cut -d ' ' -f2)        
     PING=${PING:-0}
@@ -24,7 +26,6 @@ init_player()
 
 record()
 {
-  source recorder-player.conf
   STREAM_URL=$(choose_stream)
   echo "STREAM_URL: $STREAM_URL"
   cd $MUSIC_DIR/Radio
@@ -38,8 +39,6 @@ record()
 
 play()
 {
-  source recorder-player.conf
-  PLAYLIST=/tmp/mpg123-playlist
   touch $PLAYLIST
   find $MUSIC_DIR/ -type f -name '*.mp3' | sort -R > $PLAYLIST
   kill_process mpg123
@@ -48,7 +47,6 @@ play()
 
 choose_stream()
 {
-  source recorder-player.conf
   # download latest playlist of streams
   RAND_STREAM=$(curl -s $STREAMS_LIST_URL | grep -v '#' | sort -R | tail -n1)
   RAND_URL=$(curl -s $RAND_STREAM | grep 'http:' | awk -F'=' '{print $2}' | head -n1)
@@ -68,8 +66,7 @@ kill_process()
   fi
 }
 
-# MAIN
-source recorder-player.conf
+# MAIN]
 init_player
 sudo amixer cset numid=1 -- ${VOLUME}%
 

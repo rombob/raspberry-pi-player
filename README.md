@@ -16,6 +16,10 @@ install player
 
     sudo su - pi
     curl -s https://raw.github.com/rombob/raspberry-pi-player/master/install.sh | bash
+    
+run player
+    
+    /home/pi/recorder-player.sh
 
 ### Load on boot ###
 
