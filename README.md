@@ -8,15 +8,19 @@ raspberry-pi-player
 
 ### Install ###
 
-- install dependencies
-    
-    sudo apt-get install mpg123 icecream
-    curl https://raw.github.com/rombob/raspberry-pi-player/install.sh | bash
+install dependencies
+
+    sudo apt-get install curl mpg123 icecream
+
+install player
+
+    sudo su - pi
+    curl -s https://raw.github.com/rombob/raspberry-pi-player/master/install.sh | bash
 
 ### Load on boot ###
 
 add to /etc/rc.local
-    
+
     su -c '/home/pi/recorder-player.sh' pi
     
 ### Files cleanup cron ###
