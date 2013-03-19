@@ -1,0 +1,3 @@
+1 * * * * pi /home/pi/clean_names.rb
+*/10 * * * * pi rm -f /home/pi/Music/Radio/~+*.mp3
+*/10 * * * * pi find /home/pi/Music/RadioCleaned -name '*.mp3' -size -1000k -exec rm -rv {} \;

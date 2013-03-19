@@ -1,0 +1,3 @@
+- Post played track to twitter
+- Pass commands via twitter
+- Tests

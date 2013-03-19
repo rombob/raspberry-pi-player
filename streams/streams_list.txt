@@ -1,0 +1,6 @@
+# smooth jazz
+http://fm5280.com/fm5280.pls
+# somafm secret agent
+http://somafm.com/secretagent.pls
+# top 80s
+http://rs1.radiostreamer.com:8070/listen.pls
