@@ -8,7 +8,7 @@ TS=$(date +%s)
 BUILD_FOLDER=/home/pi/recorder-player-versions/$TS
 PLAYER_FILENAME=recorder-player.sh
 PLAYER_CONF_FILENAME=recorder-player.conf
-REMOTE_PATH=https://raw.github.com/rombob/raspberry-pi-player/src
+REMOTE_PATH=https://raw.github.com/rombob/raspberry-pi-player/master/src
 
 mkdir -p $BUILD_FOLDER
 cd $BUILD_FOLDER

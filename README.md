@@ -27,6 +27,6 @@ add to /etc/rc.local
 
 uses ruby
 
-    sudo wget -O /home/pi/clean_names.rb https://raw.github.com/rombob/raspberry-pi-player/src/clean_names.rb
-    sudo wget -O /etc/cron.d/rpi_player_recorder https://raw.github.com/rombob/raspberry-pi-player/cron/rpi_player_recorder
+    sudo wget -O /home/pi/clean_names.rb https://raw.github.com/rombob/raspberry-pi-player/master/src/clean_names.rb
+    sudo wget -O /etc/cron.d/rpi_player_recorder https://raw.github.com/rombob/raspberry-pi-player/master/cron/rpi_player_recorder
     
